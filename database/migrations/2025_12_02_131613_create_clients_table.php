@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Status;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,10 +15,11 @@ return new class extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->string('full_name');
-            $table->email('email');
+            $table->string('email')->unique();
             $table->string('password');
             $table->string('phone');
             $table->string('image');
+            $table->unsignedSmallInteger('status')->default(Status::active->value);
             $table->timestamps();
         });
     }
