@@ -27,7 +27,7 @@ return new class extends Migration
             $table->time('end_time');
 
             // surcharge value
-            $table->decimal('amount', 8, 2);
+            $table->unsignedInteger('amount');
 
             $table->timestamps();
         });

@@ -1,0 +1,129 @@
+/* Wrapper and card */
+/* Wrapper and card */
+/* Body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* يمنع scroll أفقي */
+}
+
+/* Responsive adjustments for card */
+@media (max-width: 768px) {
+    .login-card {
+        width: 95%;   /* يضمن أن الكارد لا يتجاوز عرض الشاشة */
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    .login-card .login-main {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .login-logo {
+        max-width: 120px;
+    }
+}
+
+/* Logo */
+.login-logo {
+    max-width: 140px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Inputs */
+#loginForm .form-control {
+    background-color: #D3FFC8;
+    border: 2px solid #89BD04;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#loginForm .form-control:focus {
+    border-color: #7366FF;
+    box-shadow: none;
+}
+
+/* Button */
+.btn-login {
+    background-color: #89BD04;
+    border-color: #89BD04;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.btn-login:hover {
+    background-color: #7aa903;
+}
+
+/* Eye icon */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.toggle-password:hover {
+    color: #89BD04;
+}
+
+/* Custom checkbox */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+}
+
+.custom-checkbox input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    background: #fff;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #89BD04;
+    border-color: #89BD04;
+}
+
+.custom-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+    display: block;
+}
+
+/* Mobile */
+
+
+
