@@ -26,3 +26,6 @@ Route::get('/lang/{locale}', function ($locale) {
     session(['locale' => $locale]);
     return back();
 });
+Route::get('/tables/basic', function () {
+    return view('tables.basic');
+})->name('tables.basic');

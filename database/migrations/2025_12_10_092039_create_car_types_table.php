@@ -27,7 +27,6 @@ return new class extends Migration
     $table->unsignedInteger('time_fare');
     $table->unsignedInteger('base_fare');
     $table->unsignedInteger('min_fare_amount');
-
     $table->boolean('surcharge_enabled')->default(false);
     $table->unsignedSmallInteger('status')->default(Status::active->value);
 
